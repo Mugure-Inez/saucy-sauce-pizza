@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Link Bootstrap, Font Awesome, CSS, jQuery and JavaScript Start -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/scripts.js"></script>
+<!-- Link Bootstrap, Font Awesome, CSS, jQuery and JavaScript End -->
+    <title>SAUCY SAUCE PIZZA</title>
+  </head>
+  <body>
+<!-- Navbar Start -->
+    
+<!-- Navbar End -->
+<!-- Landing Start -->
+    <div class="jumbotron" id="landing-content">
+      <h1 class="page-header">SAUCY SAUCE PIZZA
+      </h1>
+      <h2 id="landing-tagline">OPEN 24 HOURS</h2>
+      <p>*Delivery only available in select states</p>
+      <button type="btn" class="btn btn-primary" id="pickup-btn">Pickup</button>
+      <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
+      <div class="container form-group" id="address">
+        <h3>Delivery Address</h3>
+<!-- Address Form Start -->
+        <form id="address-form">
+          <div class="row">
+            <div class="col-xs-6">
+              <label for="first-name">First Name</label><input required type="text" id="first-name"class="form-control address-spacing">
+            </div>
+            <div class="col-xs-6">
+              <label for="last-name">Last Name</label><input required type="text" id="last-name" class="form-control address-spacing">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <label for="street-address">Address</label><input required type="text" class="form-control" id="street-add">
+            </div>
+            <div class="col-xs-3">
+              <label for="city-name">City</label><input required type="text" class="form-control" id="city-add">
+            </div>
+            <div class="col-xs-3">
+              <label for="state-name">Estate</label>
+              <select required class="form-control delivery-address" id="estate-select">
+                <option></option>
+                <option>Woodly</option>
+                <option>Hardy</option>
+                <option>Bogani</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <label for="phone">Phone Number</label><input required type="text" class="form-control" id="zip-add">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+<!-- Landing End -->
+<!-- Order Content Start -->
+    <div class="jumbotron mt-0" id="order-content" style="margin-top: 0px !important; padding-top: 0px !important;">
+      <h1 class="page-header">Order Options</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2>Pizza</h2>
+          <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button>
+<!-- Custom Pizza Form Start -->
+          <form class="form-group" id="custom-pizza">
+            <div id="form-content">
+              <h3 id="form-header">Custom Pizza Form</h3>
+              <div class="row container">
+                <div class="col-xs-6"><p>Size</p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="size">
+                    <option></option>
+
+                    <option value="small-6">Small [6 slices]</option>
+                <option value="small-4">Small [4 slices]</option>
+            
+                  <option value="medium-12">Medium [12 slices]</option>
+                  <option value="medium-14">Medium [14 slices]</option>
+          
+                  <option value="large-18">Large [18 slices]</option>
+                  <option value="large-20">Large [20 slices]</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Sauce</p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="sauce">
+                    <option></option>
+                    <option value="tomato sauce">Tomato</option>
+                    <option value="alfredo sauce">Alfredo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Crust</p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="crust">
+                    <option></option>
+                    <option value="fast-food-pizza">Fast Food Pizza</option>
+                    <option value="cheese-stuffed-crust">Cheese Stuffed Crust</option>
+                    <option value="pizza-bagels">Pizza Bagels</option>
+                    <option value="flatbread">Flatbread</option>
+                    <option value="thin-crust">Thin Crust</option>
+                    <option value="sicilian-crust">Sicilian Crust</option>
+                    <option value="chicago-deep-dish">Chicago Deep Dish</option>
+                    <option value="neapolitan-crust">Neapolitan Crust</option>
+                    <option value="NY-style-pizza">NY Style Pizza</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Toppings 1 </p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="toppings1">
+                    <option></option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="onions">Onions</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Toppings 2 </p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="toppings2">
+                    <option></option>
+                    <option value="sausage">Sausage</option>
+                    <option value="bacon">Bacon</option>
+                    <option value="extra-cheese">Extra Cheese</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Toppings 3 </p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="toppings3">
+                    <option></option>
+                    <option value="black-olives">Black Olives</option>
+                    <option value="green-peppers">Green Peppers</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="spinach">Spinach</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
+            <button type="submit" class="btn btn-primary" id="back-button" style="    font-size: 20pt;
+              ">Back</button>
+          </form>
+<!-- Custom Pizza Form End -->
+        </div>
+        
+<!-- Cart Start -->
+<div class="col-xs-4 success-message">
+   <h2>  Your order has been placed. </h2>
+   <p>Here is your order details</p>
+
+   <ul class="text-left" id="pizza-details1"></ul>
+   <input type="button" value="Make new order" onClick="document.location.reload(true)">
+</div>
+
+        <div class="col-xs-4 " id="price-content">
+       
+          <h1 class="page-header">Cart</h1>
+          <h2>Price: Ksh <span id="final-cost"></span></h2>
+          <div id="order-details">
+            <p><a id="pizza-details-dropdown" >Order Details</a></p>
+            <ul id="pizza-details"></ul>
+            <p><a id="default-pizza-dropdown">Pizza</a></p>
+            <ul id="default-pizza-details"></ul>
+      
+            <ul id="sides-details"></ul>
+          </div>
+          <hr>
+          <p><span id="delivery-option"></span></p>
+          <div class="" style="">
+
+            <hr>
+            <form id="checkout-form" class="col-6">
+              <div class="row ">
+                <div class="">
+                  <h3>Payment</h3>
+                  <div class="container">
+  <div class="col-xs-6">
+                  <label for="cname" form-control>Name on Card</label>
+                  <input type="text" id="cname "  class="form-control" name="cardname" placeholder="John More Doe">
+</div>
+<div class="col-xs-6">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" class="form-control" placeholder="1111-2222-3333-4444">
+</div>
+<hr>
+<div class="colxs-12 m-2"></div>
+                  <div class="col-xs-4">
+                  <label for="expmonth">Exp Month</label><input type="text" id="expmonth" class="form-control" name="expmonth" placeholder="September">
+                </div>        
+                    <div class="col-xs-4">
+                      <label for="expyear">Exp Year</label><input type="text"  id="expyear"  class="form-control" name="expyear" placeholder="2018">
+                    </div>
+                    <div class="col-xs-4">
+                      <label for="cvv" >CVV</label><input type="text" id="cvv" name="cvv" class="form-control" placeholder="352">
+                    </div>
+                  </div>
+
+                </div>
+
+          </div>
+        </form>
+        <br><br>
+        <div class="d-inline"> 
+          <div class="col-xs-6"> 
+        <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                </div>
+                <div class="col-xs-6"> <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button></div>
+               
+      </div>
+        </div>
+<!-- Cart End -->
+      </div>
+    </div>
+
+
+<!-- Order Content End -->
+<!-- Footer Start -->
+    
+<!-- Footer End -->
+  </body>
+</html>
